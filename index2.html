@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=section, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section></section>
+  </body>
+  <script>
+    let section = document.querySelector("section");
+    para1 = document.createElement("p");
+    para2 = document.createElement("p");
+    section.appendChild(para1);
+    section.appendChild(para2);
+    const quote =
+      "I do not like green egg and ham.I do not like them, Kingsley";
+    const subString = "green egg and ham";
+    let quoteLenght = quote.length;
+    // console.log(quoteLenght);
+    let index = quote.indexOf(subString);
+    let start = quote.slice(0, index);
+    let revisedQuote = start + subString;
+    para1.textContent = revisedQuote;
+
+    let fixedQuote;
+    let disLike = "bullshit";
+    // let endQuote = quote.slice(quote.indexOf("."), quote.length);
+    // let changeQuoate = start + disLike + endQuote;
+    let changeQuoate = quote.replace(subString, disLike);
+    para2.textContent = changeQuoate;
+    console.log(revisedQuote);
+  </script>
+</html>

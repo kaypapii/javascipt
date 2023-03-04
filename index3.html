@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section></section>
+    <script>
+      let section = document.querySelector("section");
+      para = document.createElement("p");
+      para2 = document.createElement("p");
+      section.appendChild(para);
+      section.appendChild(para2);
+      const theorem = "Pythagorm theorem";
+      const a = 5;
+      const b = 8;
+      let c = Math.sqrt(a * a + b * b).toFixed(2);
+      let myString =
+        "Using *, we can work out that that if the two shortest sides of a right-angled triangel have lenght of * and *, the lenght of the hypothenus is *";
+      //   math.sqrt(a*a + b*b)
+      myString = myString.replace("*", theorem);
+      myString = myString.replace("*", a);
+      myString = myString.replace("*", b);
+      myString = myString.replace("*", c);
+      para.textContent = myString;
+
+      let myString1 = `Using ${theorem}, we can work out that that if the two shortest sides of a right-angled triangel have lenght of ${a} and ${b}, the lenght of the hypothenus is ${c}`;
+      para2.textContent = myString1;
+    </script>
+  </body>
+</html>
